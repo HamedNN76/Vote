@@ -26,12 +26,14 @@ export default function Users(props) {
     });
   };
   const handleAddUser = () => {
-    const hasDuplicate = state.users.find((user) => user === state.user);
+    const hasDuplicate = state.users.find(
+      (user) => user.name.toLowerCase() === state.user.toLowerCase()
+    );
     if (state.user && !hasDuplicate) {
       setState({
         ...state,
         user: "",
-        users: [...state.users, state.user],
+        users: [...state.users, { name: state.user, vote: false }],
       });
     } else if (state.user && hasDuplicate) {
       alert(strings.noDuplicateItem);
@@ -48,7 +50,7 @@ export default function Users(props) {
   const renderItem = ({ item, index }) => (
     <View style={[styles.space, styles.usersWrapper]}>
       <Text style={styles.text}>
-        {index + 1}. {item}
+        {index + 1}. {item.name}
       </Text>
       <TouchableOpacity
         style={styles.userIconsWrapper}
@@ -58,6 +60,14 @@ export default function Users(props) {
       </TouchableOpacity>
     </View>
   );
+
+  const handleStartVote = () => {
+    setState({
+      ...state,
+      isUsersPage: false,
+      isVotingPage: true,
+    });
+  };
 
   return (
     <KeyboardAvoidingView
@@ -76,6 +86,7 @@ export default function Users(props) {
         iconName="add-user"
         onPress={handleAddUser}
         style={styles.space}
+        bg="darkGray"
       />
       {state.users.length ? (
         <FlatList
@@ -86,7 +97,11 @@ export default function Users(props) {
         />
       ) : null}
       {state.users.length >= 2 ? (
-        <Button text={strings.startToVote} type="info" iconName="merge" />
+        <Button
+          text={strings.startToVote}
+          iconName="merge"
+          onPress={handleStartVote}
+        />
       ) : null}
     </KeyboardAvoidingView>
   );

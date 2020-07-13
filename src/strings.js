@@ -6,5 +6,11 @@ export default {
   padding: "padding",
   height: "height",
   noDuplicateItem: "No Duplicate Item Allowed! :(",
-  startToVote: "Start To Vote"
+  startToVote: "Start To Vote",
+  save: "Save",
+  reset: "Reset",
+  approved: "Approved",
+  rejected: "Rejected",
+  again: "Again",
+  back: "Back",
 };

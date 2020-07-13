@@ -5,6 +5,7 @@ import {
   FlatList,
   KeyboardAvoidingView,
   TouchableOpacity,
+  SafeAreaView,
 } from "react-native";
 import Input from "./Input";
 import Button from "./Button";
@@ -20,4 +21,5 @@ export {
   KeyboardAvoidingView,
   Icon,
   TouchableOpacity,
+  SafeAreaView,
 };
