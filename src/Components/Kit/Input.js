@@ -6,12 +6,14 @@ import typography from "../../StyleSheet/typography";
 import radius from "../../StyleSheet/radius";
 
 export default function Input(props) {
+  const { style, ...restProps } = props;
+
   return (
     <TextInput
-      style={styles.input}
+      style={[styles.input, style]}
       underlineColorAndroid={colors.transparent}
       placeholderTextColor={colors.darkGray}
-      {...props}
+      {...restProps}
     />
   );
 }
@@ -25,7 +27,7 @@ const styles = StyleSheet.create({
     borderColor: colors.black,
     borderWidth: 1,
     paddingHorizontal: spacing.md,
-    fontSize: typography.xl,
+    fontSize: typography.lg,
     borderRadius: radius.lg,
   },
 });

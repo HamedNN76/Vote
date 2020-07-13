@@ -1,5 +1,23 @@
-import { View, Text, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  KeyboardAvoidingView,
+  TouchableOpacity,
+} from "react-native";
 import Input from "./Input";
 import Button from "./Button";
+import Icon from "./Icon";
 
-export { View, Text, StyleSheet, Input, Button };
+export {
+  View,
+  Text,
+  StyleSheet,
+  Input,
+  Button,
+  FlatList,
+  KeyboardAvoidingView,
+  Icon,
+  TouchableOpacity,
+};

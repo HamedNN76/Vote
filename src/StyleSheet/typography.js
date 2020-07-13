@@ -1,8 +1,8 @@
 export default {
   xs: 10,
-  sm: 12,
-  md: 14,
-  lg: 16,
-  xl: 20,
-  xxl: 30,
+  sm: 13,
+  md: 15,
+  lg: 20,
+  xl: 25,
+  xxl: 35,
 };
