@@ -1,6 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "description": "A simple client app for local voting. Can be used in any games or decisions that requires voting! :)",
+  "description": "A simple client app for local voting. Can be used in any games or decisions that require voting! :)",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

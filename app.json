@@ -21,6 +21,6 @@
       "favicon": "./assets/favicon.png"
     },
     "privacy": "public",
-    "description": "A simple client app for local voting. Can be used in any games or decisions that requires voting! :)"
+    "description": "A simple client app for local voting. Can be used in any games or decisions that require voting! :)"
   }
 }
